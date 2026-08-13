@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NΞON VOID — Digital Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SCAN LINE OVERLAY -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ═══════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="NEON VOID home">
+        <span class="logo-bracket">[</span>NΞON<span class="logo-accent">VOID</span><span class="logo-bracket">]</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home"     class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#posts"    class="nav-link" data-section="posts">Posts</a></li>
+        <li><a href="#faq"      class="nav-link" data-section="faq">FAQ</a></li>
+        <li><a href="#support"  class="nav-link" data-section="support">Support</a></li>
+        <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-ghost" id="loginBtn" aria-haspopup="dialog">Login</button>
+        <button class="btn-neon"  id="signupBtn" aria-haspopup="dialog">Sign Up</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">// SYSTEM ONLINE — SIGNAL ACQUIRED</p>
+      <h1 class="hero-title">
+        <span class="glitch" data-text="WELCOME TO">WELCOME TO</span><br>
+        <span class="hero-title-accent">THE VOID</span>
+      </h1>
+      <p class="hero-sub">
+        Tech. Culture. Digital Frontiers.<br>
+        Stories from the neon-lit edge of tomorrow.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#posts" class="btn-neon btn-lg">Read Latest</a>
+        <button class="btn-ghost btn-lg" id="heroSignupBtn">Join the Grid</button>
+      </div>
+      <div class="hero-stats" aria-label="Site statistics">
+        <div class="stat"><span class="stat-num" data-target="128">0</span><span class="stat-label">Articles</span></div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat"><span class="stat-num" data-target="4700">0</span><span class="stat-label">Readers</span></div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat"><span class="stat-num" data-target="39">0</span><span class="stat-label">Topics</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hex-ring"></div>
+      <div class="hex-ring ring-2"></div>
+      <div class="hex-ring ring-3"></div>
+      <div class="center-orb"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TICKER
+  ═══════════════════════════════════════ -->
+  <div class="ticker-wrap" aria-label="Latest headlines">
+    <div class="ticker-label">// LIVE</div>
+    <div class="ticker-track" id="ticker">
+      <span>Neural Networks Break Language Barrier</span>
+      <span>●</span>
+      <span>Quantum Computing Hits 1000-Qubit Milestone</span>
+      <span>●</span>
+      <span>Open-Source AI Models Outperform Proprietary Giants</span>
+      <span>●</span>
+      <span>Cybersecurity: The Next Frontier</span>
+      <span>●</span>
+      <span>Web3 Reimagined for the Next Decade</span>
+      <span>●</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       POSTS
+  ═══════════════════════════════════════ -->
+  <section class="section" id="posts">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// LATEST TRANSMISSIONS</p>
+        <h2 class="section-title">Blog Posts</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Filter posts by category">
+        <button class="filter-tab active" role="tab" aria-selected="true"  data-filter="all">All</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="tech">Tech</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="culture">Culture</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="ai">AI</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="security">Security</button>
+      </div>
+
+      <!-- Posts grid -->
+      <div class="posts-grid" id="postsGrid">
+
+        <article class="post-card" data-category="ai">
+          <div class="post-card-glow"></div>
+          <div class="post-tag tag-ai">AI</div>
+          <h3 class="post-title">The Rise of Autonomous Agents in 2026</h3>
+          <p class="post-excerpt">How AI systems are beginning to operate independently across the digital infrastructure of our daily lives — and what that means for us.</p>
+          <div class="post-meta">
+            <span class="post-author">// VOID_EDITOR</span>
+            <span class="post-date">Aug 10, 2026</span>
+          </div>
+          <a href="post.html" class="post-read-more">Read More →</a>
+        </article>
+
+        <article class="post-card featured" data-category="tech">
+          <div class="post-card-glow"></div>
+          <div class="post-tag tag-tech">Tech</div>
+          <div class="featured-badge">Featured</div>
+          <h3 class="post-title">Quantum Cryptography: Lock of the Future</h3>
+          <p class="post-excerpt">Exploring how quantum key distribution is making classical encryption look like a padlock on a bank vault door. The math is terrifying. The future is bright.</p>
+          <div class="post-meta">
+            <span class="post-author">// SYS_NULL</span>
+            <span class="post-date">Aug 7, 2026</span>
+          </div>
+          <a href="post.html" class="post-read-more">Read More →</a>
+        </article>
+
+        <article class="post-card" data-category="culture">
+          <div class="post-card-glow"></div>
+          <div class="post-tag tag-culture">Culture</div>
+          <h3 class="post-title">Digital Identity in a Fragmented Web</h3>
+          <p class="post-excerpt">When every platform owns a slice of who you are online, what does it mean to truly exist in digital space?</p>
+          <div class="post-meta">
+            <span class="post-author">// GHOST_FREQ</span>
+            <span class="post-date">Aug 4, 2026</span>
+          </div>
+          <a href="post.html" class="post-read-more">Read More →</a>
+        </article>
+
+        <article class="post-card" data-category="security">
+          <div class="post-card-glow"></div>
+          <div class="post-tag tag-security">Security</div>
+          <h3 class="post-title">Zero-Day Exploits: Who's Really Watching?</h3>
+          <p class="post-excerpt">A deep dive into the grey-market trade of software vulnerabilities and the silent war being fought in unpatched systems worldwide.</p>
+          <div class="post-meta">
+            <span class="post-author">// NΞON_WOLF</span>
+            <span class="post-date">Aug 1, 2026</span>
+          </div>
+          <a href="post.html" class="post-read-more">Read More →</a>
+        </article>
+
+        <article class="post-card" data-category="ai">
+          <div class="post-card-glow"></div>
+          <div class="post-tag tag-ai">AI</div>
+          <h3 class="post-title">Can an AI Dream of Open Source?</h3>
+          <p class="post-excerpt">The tension between closed-model corporations and the open-source community is reaching a boiling point. One side holds the compute. The other holds the soul.</p>
+          <div class="post-meta">
+            <span class="post-author">// CIRCUIT_SAGE</span>
+            <span class="post-date">Jul 28, 2026</span>
+          </div>
+          <a href="post.html" class="post-read-more">Read More →</a>
+        </article>
+
+        <article class="post-card" data-category="culture">
+          <div class="post-card-glow"></div>
+          <div class="post-tag tag-culture">Culture</div>
+          <h3 class="post-title">Neon Cities: The Aesthetic of Overload</h3>
+          <p class="post-excerpt">Why does cyberpunk still resonate? An exploration of how the genre predicted information overload, surveillance culture, and the corporate city-state.</p>
+          <div class="post-meta">
+            <span class="post-author">// VOID_EDITOR</span>
+            <span class="post-date">Jul 25, 2026</span>
+          </div>
+          <a href="post.html" class="post-read-more">Read More →</a>
+        </article>
+
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn-ghost" id="loadMoreBtn">Load More Posts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       COMMENTS
+  ═══════════════════════════════════════ -->
+  <section class="section section-dark" id="comments">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// OPEN CHANNEL</p>
+        <h2 class="section-title">Comments</h2>
+      </div>
+
+      <div class="comments-layout">
+        <!-- Comment form -->
+        <div class="comment-form-wrap">
+          <h3 class="comment-form-title">Leave a Transmission</h3>
+          <form class="comment-form" id="commentForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="commentName">Handle <span class="required">*</span></label>
+                <input type="text" id="commentName" placeholder="your_alias" autocomplete="nickname" />
+                <span class="field-error" id="commentNameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="commentEmail">Email <span class="required">*</span></label>
+                <input type="email" id="commentEmail" placeholder="you@void.net" autocomplete="email" />
+                <span class="field-error" id="commentEmailError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="commentText">Message <span class="required">*</span></label>
+              <textarea id="commentText" rows="4" placeholder="Transmit your thoughts..."></textarea>
+              <span class="field-error" id="commentTextError"></span>
+            </div>
+            <button type="submit" class="btn-neon">Post Comment</button>
+          </form>
+        </div>
+
+        <!-- Existing comments -->
+        <div class="comments-list" id="commentsList">
+          <h3 class="comments-list-title">Recent Transmissions <span class="comment-count" id="commentCount">(3)</span></h3>
+
+          <div class="comment-item">
+            <div class="comment-avatar" aria-hidden="true">GF</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <span class="comment-author">GHOST_FREQ</span>
+                <span class="comment-time">2 hours ago</span>
+              </div>
+              <p class="comment-text">The quantum cryptography article genuinely changed how I think about security layers. More like this please.</p>
+              <button class="comment-like" aria-label="Like this comment"><span>♦</span> 14</button>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar" aria-hidden="true">NW</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <span class="comment-author">NΞON_WOLF</span>
+                <span class="comment-time">1 day ago</span>
+              </div>
+              <p class="comment-text">The zero-day piece hit hard. Most people still don't understand how active that market is. Good exposé.</p>
+              <button class="comment-like" aria-label="Like this comment"><span>♦</span> 27</button>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <div class="comment-avatar" aria-hidden="true">CS</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <span class="comment-author">CIRCUIT_SAGE</span>
+                <span class="comment-time">3 days ago</span>
+              </div>
+              <p class="comment-text">Open source AI is the only path that doesn't end in a monopoly on intelligence. Glad someone's covering this seriously.</p>
+              <button class="comment-like" aria-label="Like this comment"><span>♦</span> 41</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// KNOWLEDGE BASE</p>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item" data-open="false">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is NΞON VOID free to read?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — all articles are free to read. Creating an account unlocks commenting, bookmarks, and a personalized feed. No paywalls, ever.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-open="false">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do I create an account?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Click "Sign Up" in the top navigation. All you need is an email address — no phone number, no ID required. We'll send you a magic link to confirm your email.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-open="false">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I contribute an article?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Use the Contact section to pitch an idea or submit a draft. We cover tech, AI, digital culture, and security. We credit all contributors.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-open="false">
+          <button class="faq-question" aria-expanded="false">
+            <span>How often is new content published?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We aim for 3–4 posts per week. Breaking tech news may push that higher. Subscribe to the newsletter (bottom of the page) to never miss a drop.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-open="false">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you run ads?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We use minimal, non-tracking sponsor placements from brands relevant to our audience. We never sell reader data. Ever.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-open="false">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do I report an issue or bug?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Use the Support section below or email us directly. Bugs are fixed within 48 hours during active development cycles.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SUPPORT
+  ═══════════════════════════════════════ -->
+  <section class="section section-dark" id="support">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// SYSTEM HELP</p>
+        <h2 class="section-title">Support</h2>
+      </div>
+
+      <div class="support-grid">
+        <div class="support-card">
+          <div class="support-icon" aria-hidden="true">◈</div>
+          <h3>Documentation</h3>
+          <p>Step-by-step guides for using the site, managing your account, and setting up notifications.</p>
+          <a href="#faq" class="btn-ghost btn-sm">View Docs</a>
+        </div>
+        <div class="support-card">
+          <div class="support-icon" aria-hidden="true">◉</div>
+          <h3>Report a Bug</h3>
+          <p>Found something broken? Tell us exactly what happened and we'll fix it fast.</p>
+          <a href="#contact" class="btn-ghost btn-sm">Report</a>
+        </div>
+        <div class="support-card">
+          <div class="support-icon" aria-hidden="true">◆</div>
+          <h3>Feature Request</h3>
+          <p>Have an idea that would make NΞON VOID better? We actually read these.</p>
+          <a href="#contact" class="btn-ghost btn-sm">Suggest</a>
+        </div>
+        <div class="support-card">
+          <div class="support-icon" aria-hidden="true">◇</div>
+          <h3>Community</h3>
+          <p>Join the conversation in the comments or reach out to connect with other readers.</p>
+          <a href="#comments" class="btn-ghost btn-sm">Join</a>
+        </div>
+      </div>
+
+      <!-- Status board -->
+      <div class="status-board">
+        <h3 class="status-title">// SYSTEM STATUS</h3>
+        <div class="status-items">
+          <div class="status-item">
+            <span class="status-dot dot-green" aria-label="Operational"></span>
+            <span class="status-name">Main Site</span>
+            <span class="status-value">Operational</span>
+          </div>
+          <div class="status-item">
+            <span class="status-dot dot-green" aria-label="Operational"></span>
+            <span class="status-name">Comments</span>
+            <span class="status-value">Operational</span>
+          </div>
+          <div class="status-item">
+            <span class="status-dot dot-yellow" aria-label="Degraded"></span>
+            <span class="status-name">Search</span>
+            <span class="status-value">Degraded</span>
+          </div>
+          <div class="status-item">
+            <span class="status-dot dot-green" aria-label="Operational"></span>
+            <span class="status-name">Newsletter</span>
+            <span class="status-value">Operational</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// OPEN A CHANNEL</p>
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Pitches, collabs, bug reports, or just wanting to say hello — we read everything sent through here.</p>
+          <ul class="contact-links" role="list"
