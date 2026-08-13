@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Cryptography: Lock of the Future — NΞON VOID</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/post.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="NEON VOID home">
+        <span class="logo-bracket">[</span>NΞON<span class="logo-accent">VOID</span><span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html#home"    class="nav-link">Home</a></li>
+        <li><a href="index.html#posts"   class="nav-link active">Posts</a></li>
+        <li><a href="index.html#faq"     class="nav-link">FAQ</a></li>
+        <li><a href="index.html#support" class="nav-link">Support</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-ghost" id="loginBtn">Login</button>
+        <button class="btn-neon"  id="signupBtn">Sign Up</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <header class="post-hero">
+    <div class="post-hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <a href="index.html#posts" class="post-back">← Back to Posts</a>
+      <div class="post-tag tag-tech" style="margin-bottom:1rem;">Tech</div>
+      <h1 class="post-heading">Quantum Cryptography:<br>Lock of the Future</h1>
+      <div class="post-hero-meta">
+        <span class="post-author">// SYS_NULL</span>
+        <span class="post-meta-divider">·</span>
+        <span>Aug 7, 2026</span>
+        <span class="post-meta-divider">·</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+  </header>
+  <main class="post-body">
+    <div class="container">
+      <div class="post-layout">
+        <article class="post-content" id="postContent">
+          <p class="post-lead">Quantum key distribution is making classical encryption look like a padlock on a bank vault door. The math is terrifying. The future is neon-bright.</p>
+          <p>Somewhere in a lab, a photon is being fired down a fiber-optic cable. It carries half a cryptographic key — the other half will never travel anywhere, because it doesn't exist yet. It will only exist once it's observed at the receiving end, collapsing from possibility into certainty. This is quantum cryptography, and it is genuinely unlike anything that came before it.</p>
+          <h2>What classical encryption actually does</h2>
+          <p>Classical encryption — the RSA algorithm that secures nearly everything on the internet today — is based on a simple mathematical asymmetry: multiplying two large prime numbers together is trivially easy, but factoring the result back into those primes is computationally brutal.</p>
+          <p>The problem is the phrase "no computer we have." Quantum computers operate differently. Where a classical bit is either 0 or 1, a qubit can be both simultaneously — a phenomenon called superposition.</p>
+          <blockquote class="post-quote">
+            "The question is not if quantum computers will break classical encryption. The question is when — and whether we'll be ready."
+            — Dr. Leena Kovacs, Quantum Security Institute
+          </blockquote>
+          <h2>How quantum key distribution (QKD) works</h2>
+          <p>QKD doesn't use quantum computing to encrypt data — it uses quantum physics to transmit encryption keys. The key insight is the Heisenberg uncertainty principle: you cannot observe a quantum system without changing it.</p>
+          <p>In practice, this means any eavesdropping attempt is self-revealing. The sender and receiver can detect that someone was listening — not through clever protocol design, but through fundamental physics.</p>
+          <h2>Where we actually are in 2026</h2>
+          <p>China's quantum network now spans over 4,600 km, linking Beijing to Shanghai with satellite relay nodes. The European Quantum Internet Alliance has connected twelve cities across the continent. Commercial QKD hardware ships in rack-mounted units.</p>
+          <h2>Post-quantum cryptography: the software path</h2>
+          <p>Not every system will migrate to hardware QKD. For the rest of the world, NIST finalized its post-quantum cryptographic standards in 2024: algorithms based on problems that quantum computers are not known to solve efficiently.</p>
+          <div class="post-callout">
+            <p class="callout-label">// KEY TAKEAWAY</p>
+            <p>Quantum cryptography isn't science fiction. It's in production. The window for upgrading classical systems is open — but it won't stay open indefinitely.</p>
+          </div>
+          <h2>What this means for you</h2>
+          <p>If you're a developer, the practical step is auditing your cryptographic dependencies and planning a migration to NIST-approved post-quantum algorithms. Libraries like liboqs and PQClean already provide these primitives.</p>
+          <div class="post-tags-footer">
+            <span class="post-tag tag-tech">Tech</span>
+            <span class="post-tag tag-security">Security</span>
+          </div>
+        </article>
+        <aside class="post-sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">// About the Author</h3>
+            <div class="author-card">
+              <div class="author-avatar">SN</div>
+              <div>
+                <p class="author-name">SYS_NULL</p>
+                <p class="author-bio">Security researcher and systems thinker. Writing from the edges of the network.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">// Related Posts</h3>
+            <ul class="related-list" role="list">
+              <li><a href="post.html">Zero-Day Exploits: Who's Really Watching?</a></li>
+              <li><a href="post.html">The Rise of Autonomous Agents in 2026</a></li>
+              <li><a href="post.html">Can an AI Dream of Open Source?</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">// Share</h3>
+            <div class="share-btns">
+              <button class="btn-ghost btn-sm" onclick="copyLink()">Copy Link</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo"><span class="logo-bracket">[</span>NΞON<span class="logo-accent">VOID</span><span class="logo-bracket">]</span></p>
+          <p class="footer-tagline">Stories from the neon-lit edge of tomorrow.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navigate</h4>
+          <ul role="list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#posts">Posts</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Legal</h4>
+          <ul role="list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NΞON VOID. All rights reserved.</p>
+        <p class="footer-credit">// Built on the open web</p>
+      </div>
+    </div>
+  </footer>
+  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <p class="modal-eyebrow">// ACCESS TERMINAL</p>
+        <h2 id="loginTitle">Login</h2>
+      </div>
+      <form class="modal-form" id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@void.net" />
+          <span class="field-error" id="loginEmailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" />
+          <span class="field-error" id="loginPasswordError"></span>
+        </div>
+        <button type="submit" class="btn-neon btn-full">Access Granted</button>
+        <div class="modal-alt">
+          <button type="button" class="link-muted" id="switchToSignup">New? Sign Up</button>
+        </div>
+        <div class="form-success" id="loginSuccess"></div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-overlay" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupTitle" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <p class="modal-eyebrow">// CREATE IDENTITY</p>
+        <h2 id="signupTitle">Sign Up</h2>
+      </div>
+      <form class="modal-form" id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="signupHandle">Handle</label>
+          <input type="text" id="signupHandle" placeholder="your_alias" />
+          <span class="field-error" id="signupHandleError"></span>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="you@void.net" />
+          <span class="field-error" id="signupEmailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="min. 8 characters" />
+          <span class="field-error" id="signupPasswordError"></span>
+          <div class="password-strength" id="passwordStrength"></div>
+        </div>
+        <button type="submit" class="btn-neon btn-full">Create Account</button>
+        <div class="modal-alt">
+          <button type="button" class="link-muted" id="switchToLogin">Already have an account?</button>
+        </div>
+        <div class="form-success" id="signupSuccess"></div>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    function copyLink() {
+      navigator.clipboard?.writeText(window.location.href).then(() => {
+        if (typeof showToast === 'function') showToast('// LINK COPIED TO CLIPBOARD');
+      });
+    }
+  </script>
+</body>
+</html>
