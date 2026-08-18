@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIGNAL — Digital Culture & Tech</title>
+  <title>Quantum Cryptography: Lock of the Future — SIGNAL</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/post.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">SIGNAL</a>
+      <a href="index.html" class="nav-logo">SIGNAL</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home"      class="nav-link" data-s="home">Home</a></li>
-        <li><a href="#posts"     class="nav-link" data-s="posts">Articles</a></li>
-        <li><a href="#faq"       class="nav-link" data-s="faq">FAQ</a></li>
-        <li><a href="#support"   class="nav-link" data-s="support">Support</a></li>
-        <li><a href="#contact"   class="nav-link" data-s="contact">Contact</a></li>
+        <li><a href="index.html" class="nav-link" data-s="home">Home</a></li>
+        <li><a href="index.html#posts" class="nav-link active" data-s="posts">Articles</a></li>
+        <li><a href="index.html#faq" class="nav-link" data-s="faq">FAQ</a></li>
+        <li><a href="index.html#support" class="nav-link" data-s="support">Support</a></li>
+        <li><a href="index.html#contact" class="nav-link" data-s="contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <button class="btn-outline" id="loginBtn">Log in</button>
@@ -32,448 +33,108 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-inner">
-      <div class="hero-left">
-        <p class="eyebrow">Est. 2026 &nbsp;·&nbsp; Tech &amp; Culture</p>
-        <h1 class="hero-title">Ideas worth<br><em>reading.</em></h1>
-        <p class="hero-body">Sharp writing on AI, digital culture, and the technology reshaping how we live. No noise. Just signal.</p>
-        <div class="hero-actions">
-          <a href="#posts" class="btn-solid btn-lg">Browse articles</a>
-          <button class="btn-outline btn-lg" id="heroSignup">Subscribe free</button>
-        </div>
-        <div class="hero-bar">
-          <div class="hb-item"><strong>128</strong><span>Articles</span></div>
-          <div class="hb-div"></div>
-          <div class="hb-item"><strong>4.7k</strong><span>Readers</span></div>
-          <div class="hb-div"></div>
-          <div class="hb-item"><strong>Weekly</strong><span>Updates</span></div>
-        </div>
-      </div>
-      <div class="hero-right" aria-hidden="true">
-        <div class="hero-card hc-1">
-          <span class="hc-tag">AI</span>
-          <p>The Rise of Autonomous Agents</p>
-        </div>
-        <div class="hero-card hc-2">
-          <span class="hc-tag">Tech</span>
-          <p>Quantum Cryptography: Lock of the Future</p>
-        </div>
-        <div class="hero-card hc-3">
-          <span class="hc-tag">Culture</span>
-          <p>Digital Identity in a Fragmented Web</p>
-        </div>
+  <!-- POST HERO -->
+  <header class="post-hero">
+    <div class="post-hero-bg"></div>
+    <div class="container post-hero-inner">
+      <a href="index.html#posts" class="post-back">← Back to articles</a>
+      <span class="tag tag-tech">Tech</span>
+      <h1 class="post-heading">Quantum Cryptography:<br>Lock of the Future</h1>
+      <div class="post-hero-meta">
+        <span>SYS_NULL</span>
+        <span class="sep">·</span>
+        <span>Aug 7, 2026</span>
+        <span class="sep">·</span>
+        <span>8 min read</span>
       </div>
     </div>
-    </div><!-- /container -->
-    <div class="hero-ghost" aria-hidden="true">SIGNAL</div>
-  </section>
+  </header>
 
-  <!-- TICKER -->
-  <div class="ticker" aria-label="Latest headlines">
-    <div class="ticker-label">LIVE</div>
-    <div class="ticker-track" id="ticker">
-      <span>Neural Networks Break the Language Barrier</span>
-      <span class="sep">·</span>
-      <span>Quantum Computing Reaches 1000-Qubit Milestone</span>
-      <span class="sep">·</span>
-      <span>Open-Source AI Outperforms Proprietary Giants</span>
-      <span class="sep">·</span>
-      <span>Cybersecurity: The Frontier No One Talks About</span>
-      <span class="sep">·</span>
-      <span>Web3 Reimagined for the Next Decade</span>
-      <span class="sep">·</span>
-    </div>
-  </div>
-
-  <!-- POSTS -->
-  <section class="section" id="posts">
+  <!-- POST BODY -->
+  <main class="post-main">
     <div class="container">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow">Latest</p>
-          <h2 class="sec-title">Articles</h2>
-        </div>
-        <div class="filter-tabs" role="tablist">
-          <button class="ftab active" data-f="all" role="tab" aria-selected="true">All</button>
-          <button class="ftab" data-f="ai" role="tab" aria-selected="false">AI</button>
-          <button class="ftab" data-f="tech" role="tab" aria-selected="false">Tech</button>
-          <button class="ftab" data-f="culture" role="tab" aria-selected="false">Culture</button>
-          <button class="ftab" data-f="security" role="tab" aria-selected="false">Security</button>
-        </div>
-      </div>
+      <div class="post-layout">
 
-      <!-- Featured post -->
-      <a href="post.html" class="post-featured reveal" data-cat="tech">
-        <div class="pf-text">
-          <span class="tag tag-tech">Tech</span>
-          <h2 class="pf-title">Quantum Cryptography:<br>Lock of the Future</h2>
-          <p class="pf-excerpt">How quantum key distribution is making classical encryption obsolete — and what that means for everything on the internet today.</p>
-          <div class="pf-meta">
-            <span>SYS_NULL</span>
-            <span>Aug 7, 2026</span>
-            <span>8 min read</span>
+        <article class="post-content">
+          <p class="post-lead">Quantum key distribution is making classical encryption obsolete — and the math behind it is more fascinating than anything in science fiction.</p>
+
+          <p>Somewhere in a lab, a photon is being fired down a fiber-optic cable. It carries half a cryptographic key — the other half will never travel anywhere, because it doesn't exist yet. It will only exist once it's observed at the receiving end, collapsing from possibility into certainty. This is quantum cryptography, and it is genuinely unlike anything that came before it.</p>
+
+          <h2>What classical encryption actually does</h2>
+
+          <p>Classical encryption — the RSA algorithm that secures nearly everything on the internet today — is based on a simple mathematical asymmetry: multiplying two large prime numbers together is trivially easy, but factoring the result back into those primes is computationally brutal. A sufficiently large RSA key is secure because no computer we have can factor it in a reasonable timeframe.</p>
+
+          <p>The problem is the phrase "no computer we have." Quantum computers operate differently. Where a classical bit is either 0 or 1, a qubit can be both simultaneously — a phenomenon called superposition. When chained together through entanglement, quantum computers can evaluate many states in parallel, which allows certain factoring algorithms to crack RSA-style encryption in polynomial rather than exponential time.</p>
+
+          <div class="post-quote">
+            <p>"The question is not if quantum computers will break classical encryption. The question is when — and whether we'll be ready."</p>
+            <cite>— Dr. Leena Kovacs, Quantum Security Institute</cite>
           </div>
-        </div>
-        <div class="pf-accent" aria-hidden="true">TECH</div>
-      </a>
 
-      <!-- Grid -->
-      <div class="posts-grid" id="postsGrid">
+          <h2>How quantum key distribution works</h2>
 
-        <a href="post.html" class="post-card reveal" data-cat="ai">
-          <span class="tag tag-ai">AI</span>
-          <h3 class="pc-title">The Rise of Autonomous Agents in 2026</h3>
-          <p class="pc-excerpt">AI systems are beginning to operate independently across the digital infrastructure of daily life.</p>
-          <div class="pc-meta">
-            <span>VOID_EDITOR</span>
-            <span>Aug 10</span>
+          <p>QKD doesn't use quantum computing to encrypt data — it uses quantum physics to transmit encryption keys. The key insight is the Heisenberg uncertainty principle: you cannot observe a quantum system without changing it. If anyone intercepts a quantum-transmitted key, their observation necessarily disturbs the photons being transmitted, and that disturbance is detectable at the receiving end.</p>
+
+          <p>In practice, this means any eavesdropping attempt is self-revealing. The sender and receiver can detect that someone was listening — not through clever protocol design, but through fundamental physics. The security guarantee isn't computational, it's physical.</p>
+
+          <h2>Where we actually are in 2026</h2>
+
+          <p>China's quantum network now spans over 4,600 km, linking Beijing to Shanghai with satellite relay nodes. The European Quantum Internet Alliance has connected twelve cities across the continent. Commercial QKD hardware ships in rack-mounted units that look, reassuringly, just like normal networking equipment.</p>
+
+          <p>The limitations are real: QKD requires dedicated fiber or line-of-sight satellite links, works over limited distances without repeaters, and is expensive. But the trajectory is clear, and for high-value targets — financial institutions, government networks, critical infrastructure — deployment is already happening.</p>
+
+          <h2>Post-quantum cryptography: the software path</h2>
+
+          <p>Not every system will migrate to hardware QKD. For the rest of the world, NIST finalized its post-quantum cryptographic standards in 2024: algorithms based on problems that quantum computers are not known to solve efficiently — lattice-based cryptography, hash-based signatures, code-based systems.</p>
+
+          <div class="post-callout">
+            <p class="callout-label">Key takeaway</p>
+            <p>Quantum cryptography isn't science fiction. It's in production. The window for upgrading classical systems is open — but it won't stay that way.</p>
           </div>
-        </a>
 
-        <a href="post.html" class="post-card reveal" data-cat="culture">
-          <span class="tag tag-culture">Culture</span>
-          <h3 class="pc-title">Digital Identity in a Fragmented Web</h3>
-          <p class="pc-excerpt">When every platform owns a slice of who you are online, what does it mean to truly exist in digital space?</p>
-          <div class="pc-meta">
-            <span>GHOST_FREQ</span>
-            <span>Aug 4</span>
+          <h2>What this means for you</h2>
+
+          <p>If you're a developer, the practical step is auditing your cryptographic dependencies and planning a migration to NIST-approved post-quantum algorithms. Libraries like liboqs and PQClean already provide these primitives. If you're in security or compliance, "post-quantum readiness" is joining the standard checklist.</p>
+
+          <p>The headline is simple: the mathematical assumptions that encrypt your emails, your banking, your medical records are going to stop being safe. New mathematics is ready to replace them. The race is between the deployment of that new math and the maturation of quantum hardware — and it's a race worth paying attention to.</p>
+
+          <div class="post-tags-footer">
+            <span class="tag tag-tech">Tech</span>
+            <span class="tag tag-security">Security</span>
           </div>
-        </a>
+        </article>
 
-        <a href="post.html" class="post-card reveal" data-cat="security">
-          <span class="tag tag-security">Security</span>
-          <h3 class="pc-title">Zero-Day Exploits: Who's Really Watching?</h3>
-          <p class="pc-excerpt">A deep dive into the grey-market trade of software vulnerabilities and the silent war in unpatched systems.</p>
-          <div class="pc-meta">
-            <span>NEON_WOLF</span>
-            <span>Aug 1</span>
-          </div>
-        </a>
-
-        <a href="post.html" class="post-card reveal" data-cat="ai">
-          <span class="tag tag-ai">AI</span>
-          <h3 class="pc-title">Can an AI Dream of Open Source?</h3>
-          <p class="pc-excerpt">The tension between closed-model corporations and the open-source community is reaching a boiling point.</p>
-          <div class="pc-meta">
-            <span>CIRCUIT_SAGE</span>
-            <span>Jul 28</span>
-          </div>
-        </a>
-
-        <a href="post.html" class="post-card reveal" data-cat="culture">
-          <span class="tag tag-culture">Culture</span>
-          <h3 class="pc-title">Neon Cities: The Aesthetic of Overload</h3>
-          <p class="pc-excerpt">Why does cyberpunk still resonate? How the genre predicted information overload and surveillance culture.</p>
-          <div class="pc-meta">
-            <span>VOID_EDITOR</span>
-            <span>Jul 25</span>
-          </div>
-        </a>
-
-        <a href="post.html" class="post-card reveal" data-cat="tech">
-          <span class="tag tag-tech">Tech</span>
-          <h3 class="pc-title">The Hardware Arms Race of 2026</h3>
-          <p class="pc-excerpt">GPU manufacturers locked in a generational battle that will shape the next decade of computing power.</p>
-          <div class="pc-meta">
-            <span>SYS_NULL</span>
-            <span>Jul 20</span>
-          </div>
-        </a>
-
-      </div>
-
-      <div class="load-wrap">
-        <button class="btn-outline" id="loadMore">Load more articles</button>
-      </div>
-    </div>
-    <div class="sec-ghost" aria-hidden="true">ARTICLES</div>
-  </section>
-
-  <!-- COMMENTS -->
-  <section class="section section-grey" id="comments">
-    <div class="container">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow">Join the conversation</p>
-          <h2 class="sec-title">Comments</h2>
-        </div>
-      </div>
-
-      <div class="comments-grid">
-
-        <div class="comment-form-box reveal">
-          <h3>Leave a comment</h3>
-          <form id="commentForm" novalidate>
-            <div class="form-row">
-              <div class="fg">
-                <label for="cName">Name *</label>
-                <input type="text" id="cName" placeholder="Your name" />
-                <span class="ferr" id="cNameErr"></span>
-              </div>
-              <div class="fg">
-                <label for="cEmail">Email *</label>
-                <input type="email" id="cEmail" placeholder="you@email.com" />
-                <span class="ferr" id="cEmailErr"></span>
+        <!-- Sidebar -->
+        <aside class="post-sidebar">
+          <div class="sidebar-widget">
+            <p class="widget-title">About the author</p>
+            <div class="author-row">
+              <div class="author-av">SN</div>
+              <div>
+                <p class="author-name">SYS_NULL</p>
+                <p class="author-bio">Security researcher and systems thinker. Writing from the edges of the network.</p>
               </div>
             </div>
-            <div class="fg">
-              <label for="cText">Comment *</label>
-              <textarea id="cText" rows="4" placeholder="Share your thoughts..."></textarea>
-              <span class="ferr" id="cTextErr"></span>
-            </div>
-            <button type="submit" class="btn-solid">Post comment</button>
-          </form>
-        </div>
-
-        <div class="comments-list" id="commentsList">
-          <h3>Recent comments <span class="ccount" id="ccount">(3)</span></h3>
-
-          <div class="comment reveal">
-            <div class="c-avatar">GF</div>
-            <div class="c-body">
-              <div class="c-head">
-                <strong>Ghost Freq</strong>
-                <span>2 hours ago</span>
-              </div>
-              <p>The quantum cryptography article genuinely changed how I think about security. More like this please.</p>
-              <button class="c-like" aria-label="Like"><span>♥</span> 14</button>
-            </div>
           </div>
 
-          <div class="comment reveal">
-            <div class="c-avatar">NW</div>
-            <div class="c-body">
-              <div class="c-head">
-                <strong>Neon Wolf</strong>
-                <span>1 day ago</span>
-              </div>
-              <p>The zero-day piece hit hard. Most people still don't understand how active that market really is.</p>
-              <button class="c-like" aria-label="Like"><span>♥</span> 27</button>
-            </div>
+          <div class="sidebar-widget">
+            <p class="widget-title">Related articles</p>
+            <ul class="related-links">
+              <li><a href="post.html">Zero-Day Exploits: Who's Really Watching?</a></li>
+              <li><a href="post.html">The Rise of Autonomous Agents in 2026</a></li>
+              <li><a href="post.html">Can an AI Dream of Open Source?</a></li>
+            </ul>
           </div>
 
-          <div class="comment reveal">
-            <div class="c-avatar">CS</div>
-            <div class="c-body">
-              <div class="c-head">
-                <strong>Circuit Sage</strong>
-                <span>3 days ago</span>
-              </div>
-              <p>Open source AI is the only path that doesn't end in a monopoly on intelligence. Glad someone's writing about this.</p>
-              <button class="c-like" aria-label="Like"><span>♥</span> 41</button>
-            </div>
+          <div class="sidebar-widget">
+            <p class="widget-title">Share</p>
+            <button class="btn-outline btn-full" onclick="copyLink()">Copy link</button>
           </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="sec-ghost" aria-hidden="true">COMMENTS</div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow">Got questions?</p>
-          <h2 class="sec-title">FAQ</h2>
-        </div>
-      </div>
-      <div class="faq-list">
-
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            Is SIGNAL free to read?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a">
-            <p>Yes — every article is free. Creating an account unlocks commenting, bookmarks, and your personal reading history. No paywalls, ever.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            How do I create an account?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a">
-            <p>Click Sign up in the navigation. All you need is an email address — no phone number required. We'll send a confirmation link to your inbox.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            Can I contribute an article?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a">
-            <p>Yes. Use the Contact section to pitch your idea or submit a draft. We cover AI, tech, digital culture, and security. All contributors are credited.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            How often is new content published?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a">
-            <p>We publish 3–4 articles per week. Subscribe to the newsletter at the bottom of this page and we'll deliver them straight to your inbox.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            Do you run ads?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a">
-            <p>We use carefully chosen sponsor placements that are relevant to our readers. We never sell your data and we never run intrusive ads.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-q" aria-expanded="false">
-            How do I report a bug or issue?
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a">
-            <p>Head to the Support section or use the Contact form. We respond within 48 hours and fix confirmed bugs as fast as we can.</p>
-          </div>
-        </div>
+        </aside>
 
       </div>
     </div>
-    <div class="sec-ghost" aria-hidden="true">FAQ</div>
-  </section>
-
-  <!-- SUPPORT -->
-  <section class="section section-grey" id="support">
-    <div class="container">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow">We're here to help</p>
-          <h2 class="sec-title">Support</h2>
-        </div>
-      </div>
-
-      <div class="support-grid">
-        <div class="support-card reveal">
-          <div class="sc-num">01</div>
-          <h3>Documentation</h3>
-          <p>Step-by-step guides for using the site, managing your account, and setting up notifications.</p>
-          <a href="#faq" class="sc-link">View guides →</a>
-        </div>
-        <div class="support-card reveal">
-          <div class="sc-num">02</div>
-          <h3>Report a bug</h3>
-          <p>Something broken? Tell us exactly what happened and we'll fix it within 48 hours.</p>
-          <a href="#contact" class="sc-link">Report it →</a>
-        </div>
-        <div class="support-card reveal">
-          <div class="sc-num">03</div>
-          <h3>Feature request</h3>
-          <p>Have an idea that would make SIGNAL better? We genuinely read every submission.</p>
-          <a href="#contact" class="sc-link">Suggest it →</a>
-        </div>
-        <div class="support-card reveal">
-          <div class="sc-num">04</div>
-          <h3>Community</h3>
-          <p>Join the conversation in the comments section or reach out to connect with other readers.</p>
-          <a href="#comments" class="sc-link">Join in →</a>
-        </div>
-      </div>
-
-      <div class="status-panel reveal">
-        <p class="status-title">System status</p>
-        <div class="status-list">
-          <div class="si"><span class="dot green"></span><span class="sn">Main site</span><span class="sv">Operational</span></div>
-          <div class="si"><span class="dot green"></span><span class="sn">Comments</span><span class="sv">Operational</span></div>
-          <div class="si"><span class="dot yellow"></span><span class="sn">Search</span><span class="sv">Degraded</span></div>
-          <div class="si"><span class="dot green"></span><span class="sn">Newsletter</span><span class="sv">Operational</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="sec-ghost" aria-hidden="true">SUPPORT</div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow">Get in touch</p>
-          <h2 class="sec-title">Contact</h2>
-        </div>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h3>Let's talk</h3>
-          <p>Pitches, collaborations, bug reports, sponsorships — or just to say hello. We read everything.</p>
-          <ul class="ci-list">
-            <li><span class="ci-label">Email</span><span>editor@signal.blog</span></li>
-            <li><span class="ci-label">Response</span><span>Within 48 hours</span></li>
-            <li><span class="ci-label">Open to</span><span>Contributors &amp; sponsors</span></li>
-          </ul>
-        </div>
-        <form class="contact-form reveal" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="fg">
-              <label for="cfName">Name *</label>
-              <input type="text" id="cfName" placeholder="Your name" autocomplete="name" />
-              <span class="ferr" id="cfNameErr"></span>
-            </div>
-            <div class="fg">
-              <label for="cfEmail">Email *</label>
-              <input type="email" id="cfEmail" placeholder="you@email.com" autocomplete="email" />
-              <span class="ferr" id="cfEmailErr"></span>
-            </div>
-          </div>
-          <div class="fg">
-            <label for="cfSubject">Subject *</label>
-            <select id="cfSubject">
-              <option value="">Choose a topic...</option>
-              <option value="pitch">Article pitch</option>
-              <option value="sponsor">Sponsorship</option>
-              <option value="bug">Bug report</option>
-              <option value="feature">Feature request</option>
-              <option value="other">Other</option>
-            </select>
-            <span class="ferr" id="cfSubjectErr"></span>
-          </div>
-          <div class="fg">
-            <label for="cfMsg">Message *</label>
-            <textarea id="cfMsg" rows="5" placeholder="What's on your mind?"></textarea>
-            <span class="ferr" id="cfMsgErr"></span>
-          </div>
-          <button type="submit" class="btn-solid">Send message</button>
-          <p class="fsuccess" id="cfSuccess"></p>
-        </form>
-      </div>
-    </div>
-    <div class="sec-ghost" aria-hidden="true">CONTACT</div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter" id="newsletter">
-    <div class="container">
-      <div class="nl-inner">
-        <div class="nl-text">
-          <h2>Stay in the loop.</h2>
-          <p>New articles every week, delivered to your inbox. Unsubscribe any time.</p>
-        </div>
-        <form class="nl-form" id="nlForm" novalidate>
-          <input type="email" id="nlEmail" placeholder="your@email.com" autocomplete="email" />
-          <button type="submit" class="btn-solid">Subscribe</button>
-          <span class="ferr" id="nlErr"></span>
-          <p class="fsuccess" id="nlSuccess"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -481,4 +142,102 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <p class="footer-logo">SIGNAL</p>
-          <p>Sharp writing on AI, digital culture, and the technology reshaping how we live.</
+          <p>Sharp writing on AI, digital culture, and the technology reshaping how we live.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#posts">Articles</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SIGNAL. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="loginModal" hidden role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <h2 id="loginTitle">Welcome back</h2>
+      <p class="modal-sub">Log in to your SIGNAL account</p>
+      <form id="loginForm" novalidate>
+        <div class="fg">
+          <label for="liEmail">Email</label>
+          <input type="email" id="liEmail" placeholder="you@email.com" autocomplete="email" />
+          <span class="ferr" id="liEmailErr"></span>
+        </div>
+        <div class="fg">
+          <label for="liPass">Password</label>
+          <input type="password" id="liPass" placeholder="••••••••" autocomplete="current-password" />
+          <span class="ferr" id="liPassErr"></span>
+        </div>
+        <button type="submit" class="btn-solid btn-full">Log in</button>
+        <div class="modal-alt">
+          <button type="button" class="link-btn" id="toForgot">Forgot password?</button>
+          <span>·</span>
+          <button type="button" class="link-btn" id="toSignup">Create account</button>
+        </div>
+        <p class="fsuccess" id="liSuccess"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="signupModal" hidden role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <h2 id="signupTitle">Create account</h2>
+      <p class="modal-sub">Join thousands of readers on SIGNAL</p>
+      <form id="signupForm" novalidate>
+        <div class="fg">
+          <label for="suName">Display name</label>
+          <input type="text" id="suName" placeholder="Your name" autocomplete="name" />
+          <span class="ferr" id="suNameErr"></span>
+        </div>
+        <div class="fg">
+          <label for="suEmail">Email</label>
+          <input type="email" id="suEmail" placeholder="you@email.com" autocomplete="email" />
+          <span class="ferr" id="suEmailErr"></span>
+        </div>
+        <div class="fg">
+          <label for="suPass">Password</label>
+          <input type="password" id="suPass" placeholder="At least 8 characters" autocomplete="new-password" />
+          <span class="ferr" id="suPassErr"></span>
+          <div class="strength-bar" id="strengthBar"><div class="strength-fill" id="strengthFill"></div></div>
+          <span class="strength-label" id="strengthLabel"></span>
+        </div>
+        <button type="submit" class="btn-solid btn-full">Create account</button>
+        <div class="modal-alt">
+          <span>Already a member?</span>
+          <button type="button" class="link-btn" id="toLogin">Log in</button>
+        </div>
+        <p class="fsuccess" id="suSuccess"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="btt" id="btt" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script>
+    function copyLink() {
+      navigator.clipboard?.writeText(window.location.href)
+        .then(() => toast('Link copied!'))
+        .catch(() => toast('Copy the URL from your address bar'));
+    }
+  </script>
+</body>
+</html>
